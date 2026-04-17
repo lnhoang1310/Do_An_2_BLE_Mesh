@@ -7,22 +7,38 @@
 static dht22_t dht;
 static sgp40_t sgp;
 
-void data_collection_manage_init(data_t* data) {
-    if(data == NULL) return;
+void data_collection_manage_init(data_t *data)
+{
+    if (data == NULL)
+        return;
 
     dht22_init(&dht);
     sgp40_init(&sgp, I2C_NUM_0, GPIO_NUM_22, GPIO_NUM_21);
-    if(dht.status != DHT22_OK)
+    if (dht.status != DHT22_OK)
         ESP_LOGE(TAG, "DHT22 initialization failed");
-    
-    if(sgp.status != SGP40_OK)
+
+    if (sgp.status != SGP40_OK)
         ESP_LOGE(TAG, "SGP40 initialization failed");
-    
+
     data->dht22 = &dht;
     data->sgp40 = &sgp;
 }
 
-void data_collection_manage_update(data_t* data) {
-    if(data == NULL) return;
-    return;
+void data_collection_manage_update(data_t *data)
+{
+    if (data == NULL)
+        return;
+
+    dht22_update(data->dht22);
+    if (data->dht22->status != DHT22_OK)
+    {
+        ESP_LOGE(TAG, "DHT22 update failed");
+        return;
+    }
+    sgp40_update(data->sgp40, data->dht22->humidity, data->dht22->temperature);
+    if (data->sgp40->status != SGP40_OK)
+    {
+        ESP_LOGE(TAG, "SGP40 update failed");
+        return;
+    }
 }
