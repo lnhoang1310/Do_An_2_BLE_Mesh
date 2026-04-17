@@ -1,3 +1,3 @@
 idf_component_register(SRCS "data_collection_manage.c"
                     INCLUDE_DIRS "include"
-                    REQUIRES dht22 sgp40)
+                    REQUIRES dht22 sgp41)

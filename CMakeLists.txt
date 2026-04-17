@@ -3,5 +3,5 @@
 cmake_minimum_required(VERSION 3.16)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-set(EXTRA_COMPONENT_DIRS ble_mesh_network payload data_collection_manage dht22 sgp40)
+set(EXTRA_COMPONENT_DIRS ble_mesh_network payload data_collection_manage dht22 sgp41)
 project(Do_An_2_Ble_Mesh)

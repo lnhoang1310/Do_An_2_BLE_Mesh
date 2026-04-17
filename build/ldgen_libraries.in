@@ -160,10 +160,10 @@ $<TARGET_FILE:idf::spiffs>
 $<TARGET_FILE:idf::wifi_provisioning>
 $<TARGET_FILE:__idf_json>
 $<TARGET_FILE:idf::dht22>
-$<TARGET_FILE:idf::sgp40>
+$<TARGET_FILE:idf::sgp41>
 $<TARGET_FILE:idf::data_collection_manage>
 $<TARGET_FILE:__idf_dht22>
-$<TARGET_FILE:__idf_sgp40>
+$<TARGET_FILE:__idf_sgp41>
 $<TARGET_FILE:idf::payload>
 $<TARGET_FILE:__idf_data_collection_manage>
 $<TARGET_FILE:idf::ble_mesh_network>

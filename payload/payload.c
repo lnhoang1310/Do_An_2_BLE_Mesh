@@ -20,7 +20,7 @@ void payload_build(mesh_payload_t* payload, uint8_t type, data_t* data)
     }else{
         uint8_t status = PAYLOAD_STATUS_OK;
         if(data->dht22->status != DHT22_OK) status |= (1 << PAYLOAD_STATUS_SENSOR_DHT22_ERROR_POSITION);
-        if(data->sgp40->status != SGP40_OK) status |= (1 << PAYLOAD_STATUS_SENSOR_SGP40_ERROR_POSITION);
+        if(data->sgp41->status != SGP41_OK) status |= (1 << PAYLOAD_STATUS_SENSOR_SGP41_ERROR_POSITION);
         payload->status = status;
         payload->length = sizeof(uint8_t);
     }

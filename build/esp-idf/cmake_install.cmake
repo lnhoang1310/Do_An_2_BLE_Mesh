@@ -564,7 +564,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/esp-idf/sgp40/cmake_install.cmake")
+  include("D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/esp-idf/sgp41/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

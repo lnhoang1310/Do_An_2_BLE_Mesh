@@ -5,7 +5,7 @@
 #define TAG "DATA_MANAGE"
 
 static dht22_t dht;
-static sgp40_t sgp;
+static sgp41_t sgp;
 
 void data_collection_manage_init(data_t *data)
 {
@@ -13,15 +13,15 @@ void data_collection_manage_init(data_t *data)
         return;
 
     dht22_init(&dht);
-    sgp40_init(&sgp, I2C_NUM_0, GPIO_NUM_22, GPIO_NUM_21);
+    sgp41_init(&sgp, I2C_NUM_0, GPIO_NUM_22, GPIO_NUM_21);
     if (dht.status != DHT22_OK)
         ESP_LOGE(TAG, "DHT22 initialization failed");
 
-    if (sgp.status != SGP40_OK)
-        ESP_LOGE(TAG, "SGP40 initialization failed");
+    if (sgp.status != SGP41_OK)
+        ESP_LOGE(TAG, "SGP41 initialization failed");
 
     data->dht22 = &dht;
-    data->sgp40 = &sgp;
+    data->sgp41 = &sgp;
 }
 
 void data_collection_manage_update(data_t *data)
@@ -35,10 +35,10 @@ void data_collection_manage_update(data_t *data)
         ESP_LOGE(TAG, "DHT22 update failed");
         return;
     }
-    sgp40_update(data->sgp40, data->dht22->humidity, data->dht22->temperature);
-    if (data->sgp40->status != SGP40_OK)
+    sgp41_update(data->sgp41, data->dht22->humidity, data->dht22->temperature);
+    if (data->sgp41->status != SGP41_OK)
     {
-        ESP_LOGE(TAG, "SGP40 update failed");
+        ESP_LOGE(TAG, "SGP41 update failed");
         return;
     }
 }
