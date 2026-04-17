@@ -1,0 +1,2 @@
+source D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/bootloader/gdbinit/symbols
+source D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/bootloader/gdbinit/connect

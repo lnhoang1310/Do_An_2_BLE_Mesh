@@ -1,0 +1,77 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM12 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Code\ESPIDF\Do_An_2_Ble_Mesh\build\Do_An_2_Ble_Mesh.elf D:\Code\ESPIDF\Do_An_2_Ble_Mesh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM12'
+_FAST_FLASH_BOOT)
+conf�source...
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Apr 16 2026 02:34:52[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27c7ch (162940) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=00037ca4 vaddr=3ffbdb60 size=04e74h ( 20084) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0003cb20 vaddr=40080000 size=034f8h ( 13560) load[0m
+[0;32mI (157) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8e260h (582240) map[0m
+[0;32mI (356) esp_image: segment 4: paddr=000ce288 vaddr=400834f8 size=14538h ( 83256) load[0m
+[0;32mI (389) esp_image: segment 5: paddr=000e27c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (401) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (401) boot: Disabling RNG early entropy source...[0m
+[0;32mI (411) cpu_start: Multicore app[0m
+[0;32mI (420) cpu_start: Pro cpu start user code[0m
+[0;32mI (420) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (420) app_init: Application information:[0m
+[0;32mI (420) app_init: Project name:     Do_An_2_Ble_Mesh[0m
+[0;32mI (425) app_init: App version:      1[0m
+[0;32mI (428) app_init: Compile time:     Apr 16 2026 11:29:45[0m
+[0;32mI (433) app_init: ELF file SHA256:  5f0b1dcf1...[0m
+[0;32mI (437) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (441) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (445) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (449) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (453) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (459) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (464) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (469) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (475) heap_init: At 3FFC8F48 len 000170B8 (92 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (485) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (491) heap_init: At 40097A30 len 000085D0 (33 KiB): IRAM[0m
+[0;32mI (498) spi_flash: detected chip: generic[0m
+[0;32mI (500) spi_flash: flash io: dio[0m
+[0;33mW (503) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (516) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (520) main_task: Started on CPU0[0m
+[0;32mI (530) main_task: Calling app_main()[0m
+[0;32mI (540) BTDM_INIT: BT controller compile version [722c907][0m
+[0;32mI (540) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (540) BTDM_INIT: Bluetooth MAC: c4:de:e2:ca:cb:be[0m
+[0;32mI (550) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (930) MESH_NODE: Starting BLE Mesh...[0m
+[1;31mE (930) BLE_MESH: No Health Server context provided[0m
+[1;31mE (930) BLE_MESH: Model init failed (err -22)[0m
+[0;32mI (940) MESH_NODE: esp_ble_mesh_init OK[0m
+[1;31mE (940) BLE_MESH: Failed to set mesh/role data (err 4359)[0m
+[0;32mI (940) MESH_NODE: === BLE MESH NODE READY ===[0m
+[0;32mI (950) MESH_NODE: Scan bằng EspBleMesh hoặc nRF Mesh ngay bây giờ...[0m
