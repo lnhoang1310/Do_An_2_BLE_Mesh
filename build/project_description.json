@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Do_An_2_Ble_Mesh",
-    "project_version":    "2f80bfb-dirty",
+    "project_version":    "b19f200-dirty",
     "project_path":       "D:/Code/ESPIDF/Do_An_2_Ble_Mesh",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.5.1",
     "build_dir":          "D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build",
