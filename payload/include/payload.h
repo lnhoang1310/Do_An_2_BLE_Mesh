@@ -9,24 +9,30 @@
 
 #define PAYLOAD_STATUS_OK 0x00
 #define PAYLOAD_STATUS_SENSOR_DHT22_ERROR_POSITION 0
-#define PAYLOAD_STATUS_SENSOR_PM25_ERROR_POSITION 1
+#define PAYLOAD_STATUS_SENSOR_PMS5003_ERROR_POSITION 1
 #define PAYLOAD_STATUS_SENSOR_SGP41_ERROR_POSITION 2
 
-typedef struct{
+typedef struct
+{
     int16_t temperature;
     uint16_t humidity;
-}payload_data_convert_t;
+    uint16_t pm1_0;
+    uint16_t pm2_5;
+    uint16_t pm10;
+} payload_data_convert_t;
 
-typedef struct{
+typedef struct
+{
     uint8_t type;
     uint8_t node_id;
     uint8_t length;
-    union{
+    union
+    {
         payload_data_convert_t data;
         uint8_t status;
     };
-}__attribute__((packed)) mesh_payload_t;
+} __attribute__((packed)) mesh_payload_t;
 
-void payload_build(mesh_payload_t* payload, uint8_t type, data_t* data);
+void payload_build(mesh_payload_t *payload, uint8_t type, data_t *data);
 
 #endif
