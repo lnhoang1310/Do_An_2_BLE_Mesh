@@ -1,0 +1,27 @@
+Command: ninja all
+[1/18] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Code\ESPIDF\Do_An_2_Ble_Mesh\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/18] No install step for 'bootloader'
+[3/18] Completed 'bootloader'
+[4/18] Building C object esp-idf/payload/CMakeFiles/__idf_payload.dir/payload.c.obj
+[5/18] Building C object esp-idf/data_collection_manage/CMakeFiles/__idf_data_collection_manage.dir/data_collection_manage.c.obj
+[6/18] Building C object esp-idf/pms5003/CMakeFiles/__idf_pms5003.dir/pms5003.c.obj
+[7/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/Do_An_2_Ble_Mesh.c.obj
+[8/18] Linking C static library esp-idf\pms5003\libpms5003.a
+[9/18] Linking C static library esp-idf\data_collection_manage\libdata_collection_manage.a
+[10/18] Linking C static library esp-idf\payload\libpayload.a
+[11/18] Building C object esp-idf/ble_mesh_network/CMakeFiles/__idf_ble_mesh_network.dir/ble_mesh_network.c.obj
+[12/18] Linking C static library esp-idf\ble_mesh_network\libble_mesh_network.a
+[13/18] Linking C static library esp-idf\main\libmain.a
+[14/18] Generating esp-idf/esp_system/ld/sections.ld
+[15/18] Building C object CMakeFiles/Do_An_2_Ble_Mesh.elf.dir/project_elf_src_esp32.c.obj
+[16/18] Linking CXX executable Do_An_2_Ble_Mesh.elf
+[17/18] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/Do_An_2_Ble_Mesh.bin
+[18/18] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Code\ESPIDF\Do_An_2_Ble_Mesh\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/partition_table/partition-table.bin D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/Do_An_2_Ble_Mesh.bin"
+Do_An_2_Ble_Mesh.bin binary size 0xd9bc0 bytes. Smallest app partition is 0x100000 bytes. 0x26440 bytes (15%) free.

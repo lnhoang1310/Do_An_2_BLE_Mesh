@@ -569,6 +569,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/esp-idf/pms5003/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/Code/ESPIDF/Do_An_2_Ble_Mesh/build/esp-idf/data_collection_manage/cmake_install.cmake")
 endif()
 
